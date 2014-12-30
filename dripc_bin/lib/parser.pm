@@ -1,4 +1,5 @@
-package dripc_parser;
+package parser;
+# Parse stuff
 
 ############# USAGE ############# 
 
@@ -20,7 +21,7 @@ use Getopt::Std;
 # Custom Libraries
 use mitochy;
 use R_toolbox;
-use dripc_misc;
+use functions;
 
 my $caller = getsubname();
 
@@ -33,7 +34,7 @@ foreach my $function (@functions) {
 		print WHITE "\t- "; print0(); print WHITE ": Not defined function name of function "; print RED "$function"; print WHITE "\n";
 		die "\n";
 	}
-	push (@EXPORT, $function);
+	push (@EXPORT, $function_name);
 }
 
 ############# SUBS ############# 
